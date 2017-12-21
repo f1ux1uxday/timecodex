@@ -1,0 +1,13 @@
+{
+  "name": "TimestampMicroservice",
+  "version": "1.0.0",
+  "description": "String => Timestamp",
+  "main": "ts-app.js",
+  "author": "Lucas Dayton",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.2"
+  }
+}
