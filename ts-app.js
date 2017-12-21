@@ -48,12 +48,17 @@ app.get('/:dateParam', function(request, response) {
         natural: dateParam,
       })
     } else {
-      response.json({
-        unix: null,
-        natural: null,
-      })
+      response.send('Unix (1590987600) or Natural (June 1, 2020) format only.')
     }
   }
+})
+
+app.get('/', function(request, response) {
+  let rootString = (`To use this API, pass a date in UNIX or Natural format /
+    Unix: url.com/1590987600 /
+    Natural: url.com/June 1, 2020`)
+
+  response.send(rootString)
 })
 
 const server = app.listen(function() {
