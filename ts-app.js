@@ -48,15 +48,18 @@ app.get('/:dateParam', function(request, response) {
         natural: dateParam,
       })
     } else {
-      response.send('Unix (1590987600) or Natural (June 1, 2020) format only.')
+      response.json({
+        unix: null,
+        natural: null,
+      })
     }
   }
 })
 
 app.get('/', function(request, response) {
   let rootString = (`To use this API, pass a date in UNIX or Natural format /
-    Unix: url.com/1590987600 /
-    Natural: url.com/June 1, 2020`)
+    Unix: timecodex.herokuapp.com/1590987600 /
+    Natural: timecodex.herokuapp.com/June 1, 2020`)
 
   response.send(rootString)
 })
