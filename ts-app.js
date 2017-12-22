@@ -61,7 +61,7 @@ app.get('/', function(request, response) {
   response.send(rootString)
 })
 
-const server = app.listen(function() {
+const server = app.listen(app.get('port'), function() {
   // Since 'port' is set in app above, no need to specify port in listen call
   console.log('server listening on port', server.address().port)
 })
